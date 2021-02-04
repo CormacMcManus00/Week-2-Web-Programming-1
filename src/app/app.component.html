@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<p style="font-family: sans-serif;">Cormac McManus / S00197425</p>
+
+<p> Summary : {{summary()}}</p>
+<p *ngFor="let item of thingsToDo; let odd=odd; let even=even; let i = index;" [ngClass]="{ oddrow: odd, evenrow: even }">({{i}}) {{item}}</p>
+<p *ngIf="thingsCompleted.length == 0">Nothing completed</p>
